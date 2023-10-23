@@ -11,4 +11,4 @@ def home(request: HttpRequest):
     if request.method == 'POST':
         test = request.POST.get('inputData')
         outputtest = test + "processed"
-        return JsonResponse({'outputData' : outputtest})
+        return HttpResponse({'outputData' : outputtest})
